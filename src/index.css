@@ -1,13 +1,109 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* base styles */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Archivo Black";
+  color: rgb(200, 250, 250);
+  background: rgb(0, 10, 25);
+}
+.navbar {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.linkbar {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+}
+
+.socialLinks img {
+  width: 40px; 
+  height: 40px; 
+  margin: 0 20px; 
+  border-radius: 10px;
+  background: rgb(200, 250, 250); 
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.socialLinks img:hover{
+  transform: translateY(-10px);
+  background: rgb(255, 190, 200); 
+  
+}
+
+.home h1 {
+  padding-right: 525px;
+  position: relative;
+  padding-top: 200px;
+  text-align: center;
+  color: rgb(200, 250, 250);;
+}
+
+.typeScroll {
+  padding-right: 525px;
+  display: inline-block;
+  color: rgb(255, 190, 200);
+  
+}
+
+.home p {
+  position: relative;
+  text-align: center;
+  color:rgb(255, 225, 125)
+}
+
+
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  color: rgb(200, 150, 255);
+  text-decoration: none;
+  padding: 6px;
+  position: relative;
+}
+.navbar a:hover,
+.navbar a:focus {
+  color: rgb(250, 200, 200);
+}
+
+.navbar a::after{
+  content: ''; 
+  height: 3px;
+  width: 100%;
+  background: rgb(255, 225, 125);
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  opacity: 0;
+  transition: all 0.6s;
+  pointer-events: none;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+  opacity: 1;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
