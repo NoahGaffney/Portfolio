@@ -1,4 +1,6 @@
 import Typewriter from "typewriter-effect"
+import Navbar from './Navbar';
+import Linkbar from './Linkbar'; 
 
 
 const Home = () => {
@@ -17,10 +19,10 @@ const Home = () => {
         <div className="home">
             <h1>Noah Gaffney</h1>
             <p> I am a <span className = "typeScroll"> {typeEffect} </span> </p>
-            
-            
-
+            <Navbar/>
+            <Linkbar/>
         </div>
+        
     );
 }
  
