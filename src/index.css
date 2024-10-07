@@ -96,9 +96,15 @@
   padding: 6px;
   position: relative;
 }
+
 .navbar a:hover,
 .navbar a:focus {
   color: rgb(250, 200, 200);
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+  opacity: 1;
 }
 
 .navbar a::after{
@@ -112,11 +118,6 @@
   opacity: 0;
   transition: all 0.6s;
   pointer-events: none;
-}
-
-.navbar a:hover::after,
-.navbar a:focus::after {
-  opacity: 1;
 }
 
 .content {
