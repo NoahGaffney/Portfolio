@@ -9,7 +9,7 @@ const Navbar = () => {
                     <Link to="/about">About Me</Link>
                     <Link to="/education">Education</Link>
                     <Link to="/experience">Experience</Link>
-                    <Link to="/prodjects">Prodjects</Link>
+                    <Link to="/projects">Projects</Link>
                     <Link to="/skills">Skills</Link>
                 <a href="/Resume2024_Noah_Gaffney.pdf" target="_blank" rel="noopener noreferrer">CV</a>
             </div>

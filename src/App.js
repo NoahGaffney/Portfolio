@@ -1,7 +1,7 @@
 import Home from './Home';
 import Education from './Education';
 import Experience from './Experience';
-import Prodjects from './Prodjects';
+import Projects from './Projects';
 import About from './About';
 import Skills from './Skills';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
@@ -26,8 +26,8 @@ function App() {
           <Route exact path="/experience">
             <Experience/>
           </Route>
-          <Route exact path="/prodjects">
-            <Prodjects/>
+          <Route exact path="/projects">
+            <Projects/>
           </Route>
           <Route exact path="/skills">
             <Skills/>
