@@ -8,7 +8,21 @@
   color: rgb(200, 250, 250);
   background: rgb(0, 10, 25);
 }
+
 .navbar {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar h1{
+  padding-right: 100px;
+}
+
+
+.home .navbar {
   padding-top: 20px;
   display: flex;
   align-items: center;
@@ -16,6 +30,9 @@
   margin: 0 auto;
 }
 
+.home .navbar h1{
+  display: none;
+}
 
 .linkbar {
   padding: 40px;
