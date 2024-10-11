@@ -64,6 +64,7 @@
 .home .navbar a:nth-of-type(1):after
 {
   opacity: 1;
+  width: 100%;
 }
 
 .home .navbar a:nth-of-type(1)
@@ -71,24 +72,50 @@
   color: rgb(250, 200, 200);
 }
 
+.home .navbar a::after{
+  content: ''; 
+  height: 3px;
+  width: 0%;
+  background: rgb(255, 225, 125);
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  opacity: 0;
+  transition: all 0.6s;
+  pointer-events: none;
+}
+
 
 /* ----------------------------------------------------------------About------------------------------------------------------------ */
 
 .About h2 {
   font-family: "Afacad Flux", sans-serif;
+  position: relative;
   margin: 40px auto;
   max-width: 850px;
   line-height: 1.6;
   font-size: 24px;
   padding: 0 10px
+  
 }
 
 .About img {
   margin: 40px auto;
   border-radius: 10px;
-  padding: 0 400px;
   max-width: 400px;
   
+}
+
+.About h2::after{
+  content: ''; 
+  height: 3px;
+  width: 100%;
+  background: rgb(255, 225, 125);
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  transition: all 0.6s;
+  pointer-events: none;
 }
 
 /* ---------------------------Navbar About------------------------------- */
@@ -97,6 +124,7 @@
 .About .navbar a:nth-of-type(2):after
 {
   opacity: 1;
+  width: 100%;
 }
 
 .About .navbar a:nth-of-type(2)
@@ -120,6 +148,7 @@
 
 .Education .navbar a:nth-of-type(3):after
 {
+  width: 100%;
   opacity: 1;
 }
 
@@ -148,6 +177,7 @@
 .Experience .navbar a:nth-of-type(4):after
 {
   opacity: 1;
+  width: 100%;
 }
 
 .Experience .navbar a:nth-of-type(4)
@@ -172,6 +202,7 @@
 .Projects .navbar a:nth-of-type(5):after
 {
   opacity: 1;
+  width: 100%;
 }
 
 .Projects .navbar a:nth-of-type(5)
@@ -197,6 +228,7 @@
 .Skills .navbar a:nth-of-type(6):after
 {
   opacity: 1;
+  width: 100%;
 }
 
 
@@ -287,16 +319,17 @@
 .navbar a:hover::after,
 .navbar a:focus::after {
   opacity: 1;
+  width: 100%;
 }
 
 .navbar a::after{
   content: ''; 
-  height: 3px;
-  width: 100%;
+  height: 4px;
+  width: 0%;
   background: rgb(255, 225, 125);
   position: absolute;
-  left: 0;
-  bottom: 0; 
+  left: 0px;
+  bottom: 25px; 
   opacity: 0;
   transition: all 0.6s;
   pointer-events: none;
