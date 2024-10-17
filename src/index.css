@@ -50,6 +50,7 @@
   max-width: 800px;
   margin: 0 auto;
   background: none;
+  font-size: 18px;
 }
 
 .home .navbar h1{
@@ -57,6 +58,7 @@
 }
 
 .home .navbar a {
+  padding: 0px 0px;
   margin: 20px;
   background-color: rgb(0, 10, 25);
 }
@@ -72,16 +74,22 @@
   color: rgb(250, 200, 200);
 }
 
+.home .navbar a:hover::after,
+.home .navbar a:focus::after {
+  opacity: 1;
+  width: 100%;
+}
+
 .home .navbar a::after{
   content: ''; 
-  height: 3px;
+  height: 4px;
   width: 0%;
   background: rgb(255, 225, 125);
   position: absolute;
   left: 0;
-  bottom: -4; 
+  bottom: 10; 
   opacity: 0;
-  transition: all 0.6s;
+  transition: all 0.8s;
   pointer-events: none;
 }
 
@@ -98,6 +106,24 @@
   
 }
 
+.about-content {
+  display: flex;
+  align-items: center; /* Vertically aligns items */
+  gap: 20px; /* Space between the image and text */
+}
+
+.picOfMe {
+  width: 250px; /* Adjust the size of the image as needed */
+  height: auto;
+  border-radius: 15px; /* Optional: rounds the corners of the image */
+}
+
+.about-text {
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
 .About {
   
   font-family: "Afacad Flux", sans-serif;
@@ -109,21 +135,15 @@
   padding: 0 10px
 }
 
-.About img {
-  margin: 20px auto;
-  border-radius: 25px;
-  max-width: 400px;
-}
-
 .About h2::after{
   content: ''; 
   height: 3px;
-  width: 100%;
+  width: 50vw;
   background: rgb(255, 225, 125);
   position: absolute;
   left: 0;
   bottom: 0; 
-  transition: all 0.6s;
+  transition: all 0.4s;
   pointer-events: none;
 }
 
@@ -165,8 +185,8 @@
 
 /* ------------------------------------------------------------------Linkbar------------------------------------------------------------- */
 .linkbar {
-  padding: 20px;
-  padding-left: 35px;
+  padding-left: 15px;
+  padding-bottom: 50px;
   display: flex;
   align-items: center;
   max-width: 800px;
@@ -200,24 +220,23 @@
 .navbar {
   display: flex;
   align-items: center;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 25px 75px 25px 250px;
-  width: 100%;
-  right: 0;
+  justify-content: center; /* Distributes space between items */
+  gap: 20px;
+  padding: 25px 20px; /* Adjusted padding for better responsiveness */
   background-color: rgb(20, 30, 45);
 }
 
 .navbar h1 {
-  padding-right: 100px;
   font-size: 35px;
+  padding-right: 2.5vw;
   background: transparent;
+  margin: 0; /* Remove default margin */
 }
 
 .navbar a {
-  margin: 40px;
+  padding: 5px 1.25vw;
   color: rgb(200, 150, 255);
+  background-color: rgb(20, 30, 45);
   text-decoration: none;
   position: relative;
 }
@@ -230,16 +249,16 @@
 .navbar a:hover::after,
 .navbar a:focus::after {
   opacity: 1;
-  width: 100%;
+  width: 40%;
 }
 
-.navbar a::after{
+.navbar a::after {
   content: ''; 
   height: 4px;
   width: 0%;
   background: rgb(255, 225, 125);
   position: absolute;
-  left: 0px;
+  left: 15px;
   bottom: -5px; 
   opacity: 0;
   transition: all 0.6s;
