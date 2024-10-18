@@ -8,6 +8,9 @@ const Linkbar = () => {
                 <a href="https://www.linkedin.com/in/noah-micheal-gaffney/" target="_blank" rel="noopener noreferrer">
                     <img src="linkedin.png" alt="LinkedIn" className="png" />
                 </a>
+                <a href="https://x.com/Noah_Gaff" target="_blank" rel="noopener noreferrer">
+                    <img src="twitter.png" alt="Twitter" className="png" />
+                </a>
                 <a href="https://www.youtube.com/channel/UCtgV94mC0rGCtNWfggfpTyA" target="_blank" rel="noopener noreferrer">
                     <img src="youtube.png" alt="YouTube" className="png" />
                 </a>

@@ -95,16 +95,6 @@
 
 
 /* ----------------------------------------------------------------About------------------------------------------------------------ */
-.About h2 {
-  font-family: "Afacad Flux", sans-serif;
-  position: relative;
-  margin: 40px auto;
-  max-width: 850px;
-  line-height: 1.6;
-  font-size: 24px;
-  padding: 0 10px
-  
-}
 
 .about-content {
   display: flex;
@@ -125,7 +115,17 @@
 }
 
 .About {
-  
+  font-family: "Afacad Flux", sans-serif;
+  position: relative;
+  margin: 40px auto;
+  max-width: 850px;
+  line-height: 1.6;
+  font-size: 24px;
+  padding: 0 10px
+}
+
+
+.About h2 {
   font-family: "Afacad Flux", sans-serif;
   position: relative;
   margin: 40px auto;
@@ -146,6 +146,80 @@
   transition: all 0.4s;
   pointer-events: none;
 }
+
+
+.About h3 {
+  font-family: "Afacad Flux", sans-serif;
+  position: relative;
+  margin: 40px auto;
+  max-width: 850px;
+  line-height: 1.6;
+  font-size: 24px;
+  padding: 0 10px
+}
+
+.About h3::after{
+  content: ''; 
+  height: 3px;
+  width: 50vw;
+  background: rgb(255, 225, 125);
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  transition: all 0.4s;
+  pointer-events: none;
+}
+
+
+@keyframes highlight {
+  from {
+      background-color:  rgb(250, 200, 200);
+  }
+  to {
+      background-color: transparent;
+  }
+}
+
+.highlight-link {
+  font-family: "Afacad Flux", sans-serif;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.highlight-link:hover,
+.highlight-link:focus {
+  animation: highlight 1s forwards;
+}
+
+.bullet-points-container {
+  max-width: 700px; /* Optional: to control the container width */
+  margin: auto; /* Center the container */
+}
+
+.bullet-points {
+  display: grid; /* Apply grid to the ul element */
+  grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+  gap: 10px; /* Space between items */
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.bullet-points li {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Afacad Flux", sans-serif;
+  margin-bottom: 10px; /* Space between items */
+}
+
+.bullet-points li::before {
+  content: '》 '; /* Add arrow bullet before each item */
+  color: rgb(200, 150, 255);; /* Set color for the arrow */
+  margin-right: 5px; /* Space between arrow and text */
+}
+
 
 /* -------------------------------------------------------------Education------------------------------------------------------------ */
 .Education h2 {
