@@ -7,7 +7,7 @@
 /*----------------------------------------------------------------------base styles----------------------------------------------------------------------*/
 * {
   margin: 0;
-  font-family: "Archivo Black";
+  font-family: "Afacad Flux", sans-serif;
   color: rgb(200, 250, 250);
   background: rgb(0, 10, 25);
 }
@@ -20,12 +20,21 @@
 
 
 /* -----------------------------------------------------------------------Home----------------------------------------------------------------------- */
+
+.home {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
 .home h1 {
-  padding-right: 525px;
+  font-size: 42px;
+  padding-right: 475px;
   position: relative;
-  padding-top: 200px;
   text-align: center;
-  color: rgb(200, 250, 250);;
+  color: rgb(200, 250, 250);
 }
 
 .typeScroll {
@@ -38,7 +47,12 @@
 .home p {
   position: relative;
   text-align: center;
-  color:rgb(255, 225, 125)
+  color:rgb(255, 225, 125);
+}
+
+
+.home .linkbar {
+  padding-right: 500px;
 }
 
 /* ---------------------------Navbar Home------------------------------- */
@@ -259,8 +273,6 @@
 
 /* ------------------------------------------------------------------Linkbar------------------------------------------------------------- */
 .linkbar {
-  padding-left: 15px;
-  padding-bottom: 50px;
   display: flex;
   align-items: center;
   max-width: 800px;
@@ -308,6 +320,7 @@
 }
 
 .navbar a {
+  font-family: "Archivo Black";
   padding: 5px 1.25vw;
   color: rgb(200, 150, 255);
   background-color: rgb(20, 30, 45);
@@ -337,4 +350,30 @@
   opacity: 0;
   transition: all 0.6s;
   pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+ 
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  
+ 
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .navbar ul {
+    display: none; 
+    flex-direction: column;
+  }
+  
+
 }

@@ -7,12 +7,12 @@ const About = () => {
                 <p className="about-text">
                     I am many things, but above all else, I am striving to be more than I was the day before. 
                     I started learning how to program early, going to a summer camp that taught Java programming when I was thirteen years old because I wanted to learn how to make Minecraft mods. 
-                    I didn’t take a mod-making class instead, I started with “Hello World” basics and was introduced to 
+                    I did not take a mod-making class instead, I started with “Hello World” basics and was introduced to 
                     <a href="https://www.youtube.com/watch?v=WUhOnX8qt3I" target="_blank" rel="noopener noreferrer" className="highlight-link"> Meet the Pyro </a> 
                     as it came out while I was there (This is how I keep track of the date I started programming) and fell in love for a short time with making console-level text adventure games. 
-                    From there I would teach myself how to make a whole 3D game in Java from 
+                    From there I would teach myself how to make a whole 3D game in Java using the incredible tutorials made by 
                     <a href="https://www.youtube.com/playlist?list=PL656DADE0DA25ADBB" target="_blank" rel="noopener noreferrer" className="highlight-link"> The Cherno</a>, 
-                    eventually make a few Minecraft mods, and in my senior year of high school was properly introduced to OOP and began to grasp just how powerful programming was.
+                    and eventually got around to making a few Minecraft mods. In my senior year of high school was properly introduced to OOP and finally began to grasp just how powerful programming could be.
                 </p>
             </div>
 
@@ -20,7 +20,7 @@ const About = () => {
 
             <div className="bullet-points-container">
             <ul className="bullet-points">
-                <li>Birthday: 17 April 1999</li>
+                <li>Birthday: April 17, 1999</li>
                 <li>Phone: +1 (917) 855 - 6205</li>
 
                 <li>City: New Rochelle, NY</li>
