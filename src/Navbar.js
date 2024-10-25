@@ -4,6 +4,11 @@ const Navbar = () => {
     return (  
         <nav className = "navbar">
             <h1> Noah Gaffney</h1>
+            <div clasName="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div classname = "links">
             <Link to="/">Home</Link>
                     <Link to="/about">About Me</Link>
