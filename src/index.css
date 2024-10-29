@@ -67,11 +67,10 @@
     text-align: center;
   }
 
-  .home .linkbar {
-  }
-  
-  .home .navbar a {
-    display: none;
+  .home .navbar a:hover,
+  .home .navbar a:focus {
+    background-color: transparent;
+    color: rgb(250, 200, 200);
   }
 
 }
@@ -108,6 +107,7 @@
   opacity: 1;
   width: 100%;
 }
+
 
 .home .navbar a::after{
   content: ''; 
@@ -150,9 +150,8 @@
   max-width: 850px;
   line-height: 1.6;
   font-size: 24px;
-  padding: 0 10px
+  padding: 0 10px;
 }
-
 
 .About h2 {
   font-family: "Afacad Flux", sans-serif;
@@ -161,10 +160,10 @@
   max-width: 850px;
   line-height: 1.6;
   font-size: 24px;
-  padding: 0 10px
+  padding: 0 10px;
 }
 
-.About h2::after{
+.About h2::after {
   content: ''; 
   height: 3px;
   width: 50vw;
@@ -175,7 +174,6 @@
   transition: all 0.4s;
   pointer-events: none;
 }
-
 
 .About h3 {
   font-family: "Afacad Flux", sans-serif;
@@ -184,10 +182,10 @@
   max-width: 850px;
   line-height: 1.6;
   font-size: 24px;
-  padding: 0 10px
+  padding: 0 10px;
 }
 
-.About h3::after{
+.About h3::after {
   content: ''; 
   height: 3px;
   width: 50vw;
@@ -198,7 +196,6 @@
   transition: all 0.4s;
   pointer-events: none;
 }
-
 
 @keyframes highlight {
   from {
@@ -247,6 +244,32 @@
   content: '》 '; /* Add arrow bullet before each item */
   color: rgb(200, 150, 255);; /* Set color for the arrow */
   margin-right: 5px; /* Space between arrow and text */
+}
+
+/* Media query for screens smaller than 800px */
+@media (max-width: 800px) {
+
+  .about-content {
+    flex-direction: column; /* Stack image on top of the text */
+    align-items: center; /* Center the content */
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .picOfMe {
+    width: 100%; /* Make the image take full width */
+    max-width: 400px; /* Optional: Set a max width for the image */
+  }
+
+  .bullet-points {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    padding-left: 40px;
+  }
+
+  .linkbar {
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 
@@ -355,12 +378,14 @@
 .navbar .menu span {
   height: 0.4rem;
   width: 100%; 
-  background-color: #fff;
+  background-color: rgb(200, 150, 255);
   border-radius: 0.2rem;
+  transition: all 0.6s;
 }
 
-.menu-items {
-  display: none;
+.navbar .menu span :hover
+.navbar .menu span :focus {
+  color: rgb(250, 200, 200);
 }
 
 .navbar a:hover,
@@ -388,21 +413,47 @@
 }
 
 @media (max-width: 1100px) {
- 
+
   .navbar {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .navbar .menu {
     display: flex;
-
+    transition: all 0.6s;
+    padding: 25px 20px;
+    cursor: pointer;
   }
   
-  .navbar a {
+  .navbar .links {
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.6s;
+    background-color: transparent;
   }
 
+  .navbar .links.open {
+    display: flex;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    padding: 10px 0;
+  }
+
+  .navbar a:hover::after,
+  .navbar a:focus::after {
+    opacity: 0;
+  }
+
+  .navbar a:hover,
+  .navbar a:focus {
+    background-color: rgb(255, 225, 125);
+    border-radius: 25%;
+    color: rgb(150, 100, 225);
+  }
 }
 
 
