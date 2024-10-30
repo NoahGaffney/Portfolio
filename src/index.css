@@ -9,7 +9,6 @@
   margin: 0;
   font-family: "Afacad Flux", sans-serif;
   color: rgb(200, 250, 250);
-  background: rgb(0, 10, 25);
 }
 
 .content {
@@ -18,6 +17,42 @@
   padding: 20px;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the timeline text color to match the purple theme */
+.vertical-timeline-element-content {
+  color: rgb(200, 150, 255); /* Purple color for timeline text */
+  background: transparent; /* Make background transparent if needed */
+  box-shadow: none; /* Remove box-shadow if present */
+}
+
+/* Override the title color */
+.vertical-timeline-element-title {
+  color: rgb(200, 150, 255); /* Purple color for titles */
+}
+
+/* Override the subtitle color */
+.vertical-timeline-element-subtitle {
+  color: rgb(150, 100, 255); /* Purple color for subtitles */
+}
+
+/* Override the date color */
+.vertical-timeline-element-date {
+  color: rgb(200, 150, 255); /* Purple color for dates */
+}
+
+/* Set the arrow color to transparent if needed */
+.vertical-timeline-element-content::before {
+  border-right-color: transparent; /* Make the arrow transparent if desired */
+}
+
+.vertical-timeline-element-content p {
+  color: rgb(125, 0, 255); /* Purple color for description */
+}
 
 /* -----------------------------------------------------------------------Home----------------------------------------------------------------------- */
 
@@ -29,6 +64,7 @@
   align-items: flex-start;
   padding-left: 30vw;
   font-size: 18px;
+  background-color: rgb(0, 10, 25);
 }
 
 .home h1 {
@@ -88,7 +124,7 @@
 .home .navbar a {
   padding: 0px 0px;
   margin: 15px;
-  background-color: rgb(0, 10, 25);
+  background-color: transparent;
 }
 
 .home .navbar a:nth-of-type(1):after
@@ -124,17 +160,29 @@
 
 
 /* ----------------------------------------------------------------About------------------------------------------------------------ */
+/* Apply background color to the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the body covers the full viewport height */
+  background-color: rgb(0, 10, 25); /* Set the desired background color */
+}
 
+html {
+  height: 100%; /* Ensure the html element also covers the full height */
+}
+
+/* Keep your existing styles */
 .about-content {
   display: flex;
-  align-items: center; /* Vertically aligns items */
-  gap: 20px; /* Space between the image and text */
+  align-items: center;
+  gap: 20px;
 }
 
 .picOfMe {
-  width: 250px; /* Adjust the size of the image as needed */
+  width: 250px;
   height: auto;
-  border-radius: 15px; /* Optional: rounds the corners of the image */
+  border-radius: 15px;
 }
 
 .about-text {
@@ -151,6 +199,7 @@
   line-height: 1.6;
   font-size: 24px;
   padding: 0 10px;
+  color: white;
 }
 
 .About h2 {
@@ -164,13 +213,13 @@
 }
 
 .About h2::after {
-  content: ''; 
+  content: '';
   height: 3px;
   width: 50vw;
   background: rgb(255, 225, 125);
   position: absolute;
   left: 0;
-  bottom: 0; 
+  bottom: 0;
   transition: all 0.4s;
   pointer-events: none;
 }
@@ -186,23 +235,23 @@
 }
 
 .About h3::after {
-  content: ''; 
+  content: '';
   height: 3px;
   width: 50vw;
   background: rgb(255, 225, 125);
   position: absolute;
   left: 0;
-  bottom: 0; 
+  bottom: 0;
   transition: all 0.4s;
   pointer-events: none;
 }
 
 @keyframes highlight {
   from {
-      background-color:  rgb(250, 200, 200);
+    background-color: rgb(250, 200, 200);
   }
   to {
-      background-color: transparent;
+    background-color: transparent;
   }
 }
 
@@ -220,15 +269,15 @@
 }
 
 .bullet-points-container {
-  max-width: 700px; /* Optional: to control the container width */
-  margin: auto; /* Center the container */
+  max-width: 700px;
+  margin: auto;
 }
 
 .bullet-points {
-  display: grid; /* Apply grid to the ul element */
-  grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
-  gap: 10px; /* Space between items */
-  list-style: none; /* Remove default bullet points */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -237,32 +286,31 @@
   font-weight: bold;
   font-size: 20px;
   font-family: "Afacad Flux", sans-serif;
-  margin-bottom: 10px; /* Space between items */
+  margin-bottom: 10px;
 }
 
 .bullet-points li::before {
-  content: '》 '; /* Add arrow bullet before each item */
-  color: rgb(200, 150, 255);; /* Set color for the arrow */
-  margin-right: 5px; /* Space between arrow and text */
+  content: '》 ';
+  color: rgb(200, 150, 255);
+  margin-right: 5px;
 }
 
-/* Media query for screens smaller than 800px */
+/* Media query for smaller screens */
 @media (max-width: 800px) {
-
   .about-content {
-    flex-direction: column; /* Stack image on top of the text */
-    align-items: center; /* Center the content */
+    flex-direction: column;
+    align-items: center;
     padding-left: 40px;
     padding-right: 40px;
   }
 
   .picOfMe {
-    width: 100%; /* Make the image take full width */
-    max-width: 400px; /* Optional: Set a max width for the image */
+    width: 100%;
+    max-width: 400px;
   }
 
   .bullet-points {
-    grid-template-columns: 1fr; /* Change to a single column layout */
+    grid-template-columns: 1fr;
     padding-left: 40px;
   }
 
@@ -273,13 +321,38 @@
 }
 
 
+
 /* -------------------------------------------------------------Education------------------------------------------------------------ */
+
+/* Adjust the container */
+.Education {
+  background-color: rgb(0, 10, 25);
+  min-height: 100vh; /* Full viewport height */
+  padding: 40px 10vw; /* Padding around the content */
+}
+
+/* Align h2 to the left */
 .Education h2 {
-  margin: 40px auto;
+  position: relative;
+  margin: 0; /* No margin on the sides */
   max-width: 650px;
   line-height: 1.6;
-  font-size: 24px;
-  padding: 0 10px
+  font-size: 32px;
+  padding: 0 10px;
+  text-align: left; /* Align text inside h2 to the left */
+}
+
+/* The line under h2 */
+.Education h2::after {
+  content: ''; 
+  height: 3px;
+  width: 75vw;
+  background: rgb(255, 225, 125);
+  position: absolute;
+  left: 0; /* Align the underline to the left */
+  bottom: 0;
+  transition: all 0.4s;
+  pointer-events: none;
 }
 
 /* -------------------------------------------------------------Experience------------------------------------------------------------- */
