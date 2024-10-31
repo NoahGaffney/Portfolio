@@ -359,6 +359,27 @@ html {
   pointer-events: none;
 }
 
+/* Styles for the PDF button image */
+.pdf-button-image {
+  width: 35%; /* Set the default width */
+  height: auto; /* Adjust height automatically to maintain aspect ratio */
+  margin-top: 10px; /* Space between the image and other elements */
+  cursor: pointer; /* Show pointer when hovering over the image */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transitions */
+}
+
+.pdf-button-image:hover {
+  transform: scale(1.25); /* Slight zoom effect on hover */
+  opacity: 1; /* Make it slightly transparent on hover */
+}
+
+/* Add additional styling if needed */
+.pdf-button-image:active {
+  transform: scale(0.95); /* Slight shrink effect when clicked */
+  opacity: 0.6; /* More transparency when clicked */
+}
+
+
 /* -------------------------------------------------------------Experience------------------------------------------------------------- */
 .Experience h2 {
   margin: 40px auto;
@@ -379,11 +400,25 @@ html {
 
 /* ----------------------------------------------------------------Skills------------------------------------------------------------- */
 .Skills h2 {
+  font-family: "Afacad Flux", sans-serif;
+  position: relative;
   margin: 40px auto;
-  max-width: 650px;
+  max-width: 850px;
   line-height: 1.6;
-  font-size: 24px;
-  padding: 0 10px
+  font-size: 28px;
+  padding: 0 10px;
+}
+
+.Skills h2::after {
+  content: '';
+  height: 3px;
+  width: 50vw;
+  background: rgb(255, 225, 125);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s;
+  pointer-events: none;
 }
 
 /* ------------------------------------------------------------------Linkbar------------------------------------------------------------- */

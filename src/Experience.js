@@ -29,29 +29,37 @@ const Experience = () => {
   const timeline = [
     {
       icon: workIcon,
-      date: "2021 - 2023",
-      title: "Master of Science in Computer Science",
-      subtitle: "University ABC",
-      desc: "Specialized in AI and Machine Learning.",
+      date: "SEP 2024 - CURRENT",
+      title: "MICRO CENTER",
+      subtitle: "Yonkers, NY",
+      desc: "Dedicated to providing exceptional customer service and guiding customers towards optimal technology solutions. This involves leveraging product knowledge to offer tailored recommendations, assisting with purchases, and fostering a positive shopping experience.",
     },
     {
       icon: workIcon,
-      date: "2017 - 2021",
-      title: "Bachelor of Science in Software Engineering",
-      subtitle: "University XYZ",
-      desc: "Focused on full-stack development and algorithms.",
+      date: "JUN 2023 - MAR 2024",
+      title: "INTERN",
+      subtitle: "The Difference - New York",
+      desc: "Collaborated with cross-functional teams to refine UI designs, incorporating user feedback to improve usability. Additionally, I developed and maintained a Flutter mobile application, prioritizing UI/UX to elevate user satisfaction and streamline interactions.",
+    },
+    {
+      icon: workIcon,
+      date: "JUN 2023 - AUG 2023",
+      title: "AI MARKET RESEARCH",
+      subtitle: "Dream Vault Capital. New Rochelle, NY",
+      desc: "Analyzed data to uncover trends and potential growth opportunities. I presented these findings to senior leadership to inform strategic decisions. By leveraging AI tools, I optimized data collection and analysis processes. Additionally, I conducted market research to gain valuable insights into consumer behavior.",
     },
     {
       icon: workIcon, // Achievement or milestone icon
-      title: "Summa Cum Laude Graduate",
-      subtitle: "University XYZ",
-      desc: "Graduated with highest honors.",
+      date: "JUN 2020 - MAR 2021",
+      title: "CONTACT TRACER",
+      subtitle: "New York State Department Of Health",
+      desc: "Played a crucial role in contact tracing efforts, interviewing individuals diagnosed with infectious diseases to identify close contacts. I utilized case management software to meticulously document patient and contact information, symptoms, and exposure details. By collaborating with healthcare providers and public health officials, I contributed to efficient case management and outbreak control.",
     },
   ];
 
   return (
     <div className="Education">
-      <h2>Education</h2>
+      <h2>Experience</h2>
       <VerticalTimeline>
         {timeline.map((t, i) => (
           <VerticalTimelineElement

@@ -18,27 +18,35 @@ const starIcon = {
 };
 
 const Education = () => {
-  // Example timeline data for education (replace this with your actual education data)
+  // Example timeline data for education
   const timeline = [
     {
       icon: schoolIcon,
-      date: "2021 - 2023",
-      title: "Master of Science in Computer Science",
-      subtitle: "University ABC",
-      desc: "Specialized in AI and Machine Learning.",
+      date: "AUG 2021 - MAY 2024",
+      title: "Bachelor of Science in Computer Science",
+      subtitle: "SUNY NEW PALTZ - New Paltz, NY",
+      pdfLink: "/CollegeDeploma.pdf", // New Paltz PDF link
+      buttonImage: "/NewPaltzD.png", // PNG image for New Paltz
     },
     {
       icon: schoolIcon,
-      date: "2017 - 2021",
-      title: "Bachelor of Science in Software Engineering",
-      subtitle: "University XYZ",
-      desc: "Focused on full-stack development and algorithms.",
+      date: "AUG 2017 - DEC 2019",
+      title: "Bachelor of Art in Computer Science (Incomplete)",
+      subtitle: "CUNY HUNTER COLLEGE - New York, NY",
     },
     {
-      icon: schoolIcon, // Achievement or milestone icon
-      title: "Summa Cum Laude Graduate",
-      subtitle: "University XYZ",
-      desc: "Graduated with highest honors.",
+      icon: schoolIcon,
+      date: "SEP 2016 - JUNE 2017",
+      title: "Arch Bishop Stepinac",
+      subtitle: "White Plains, NY",
+      pdfLink: "/HighschoolDeploma.pdf", // Stepinac PDF link
+      buttonImage: "/ABSD.png", // PNG image for Stepinac
+    },
+    {
+      icon: schoolIcon,
+      date: "SEP 2013 - JUNE 2016",
+      title: "Saint Andrews",
+      subtitle: "Barington, RI",
     },
   ];
 
@@ -50,8 +58,12 @@ const Education = () => {
           <VerticalTimelineElement
             key={i}
             className="vertical-timeline-element--education"
-            contentStyle={i === 0 ? { background: "rgb(33, 150, 243)", color: "#fff" } : undefined}
-            contentArrowStyle={i === 0 ? { borderRight: "7px solid rgb(33, 150, 243)" } : undefined}
+            contentStyle={
+              i === 0 ? { background: "rgb(33, 150, 243)", color: "#fff" } : undefined
+            }
+            contentArrowStyle={
+              i === 0 ? { borderRight: "7px solid rgb(33, 150, 243)" } : undefined
+            }
             date={t.date}
             {...t.icon}
           >
@@ -60,6 +72,21 @@ const Education = () => {
               <h4 className="vertical-timeline-element-subtitle">{t.subtitle}</h4>
             )}
             {t.desc && <p>{t.desc}</p>}
+            {t.pdfLink && t.buttonImage && (
+            <a
+              href={t.pdfLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pdf-button"
+              style={{ marginTop: "10px", display: "inline-block" }}
+            >
+              <img
+                src={t.buttonImage}
+                alt="Download PDF"
+                className="pdf-button-image"  // Add this class
+              />
+            </a>
+          )}
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
