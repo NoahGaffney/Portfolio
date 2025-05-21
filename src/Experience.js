@@ -13,16 +13,8 @@ import {
   
   const workIcon = {
     icon: <FontAwesomeIcon icon={faBriefcase} />,
-    iconStyle: { background: 'rgb(33, 150, 243)', color: '#fff' },
+    iconStyle: { background: 'rgb(255, 225, 125)', color: '#fff' },
   };
-const schoolIcon = {
-  icon: <FontAwesomeIcon icon={faSchool} />,
-  iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
-};
-const starIcon = {
-  icon: <FontAwesomeIcon icon={faStar} />,
-  iconStyle: { background: "rgb(16, 204, 82)", color: "#fff" },
-};
 
 const Experience = () => {
   // Example timeline data for education (replace this with your actual education data)
@@ -65,7 +57,7 @@ const Experience = () => {
           <VerticalTimelineElement
             key={i}
             className="vertical-timeline-element--education"
-            contentStyle={i === 0 ? { background: "rgb(33, 150, 243)", color: "#fff" } : undefined}
+            contentStyle={i === 0 ? { background: "rgb(255, 255, 255)", color: "#fff" } : undefined}
             contentArrowStyle={i === 0 ? { borderRight: "7px solid rgb(33, 150, 243)" } : undefined}
             date={t.date}
             {...t.icon}
