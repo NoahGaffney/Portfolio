@@ -10,11 +10,7 @@ import { faSchool, faStar } from "@fortawesome/free-solid-svg-icons";
 // Icons for the timeline
 const schoolIcon = {
   icon: <FontAwesomeIcon icon={faSchool} />,
-  iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
-};
-const starIcon = {
-  icon: <FontAwesomeIcon icon={faStar} />,
-  iconStyle: { background: "rgb(16, 204, 82)", color: "#fff" },
+  iconStyle: { background: "rgb(250, 200, 200)", color: "#fff" },
 };
 
 const Education = () => {
@@ -59,7 +55,7 @@ const Education = () => {
             key={i}
             className="vertical-timeline-element--education"
             contentStyle={
-              i === 0 ? { background: "rgb(33, 150, 243)", color: "#fff" } : undefined
+              i === 0 ? { background: "rgb(255, 255, 255)", color: "#fff" } : undefined
             }
             contentArrowStyle={
               i === 0 ? { borderRight: "7px solid rgb(33, 150, 243)" } : undefined
