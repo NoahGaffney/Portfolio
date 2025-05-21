@@ -9,7 +9,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
   
   const workIcon = {
     icon: <FontAwesomeIcon icon={faBriefcase} />,
-    iconStyle: { background: 'rgb(255, 225, 125)', color: '#fff' },
+    iconStyle: { background: 'rgb(255, 225, 125)', color: 'rgb(255, 255, 255)' },
   };
 
 const Experience = () => {

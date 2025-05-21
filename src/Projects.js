@@ -45,7 +45,7 @@ const Projects = () => {
           <VerticalTimelineElement
             key={i}
             className="vertical-timeline-element--education"
-            contentStyle={i === 0 ? { background: "rgb(255, 225, 125)", color: "#fff" } : undefined}
+            contentStyle={i === 0 ? { background: "rgb(255, 255, 255)", color: "#fff" } : undefined}
             contentArrowStyle={i === 0 ? { borderRight: "7px solid rgb(33, 150, 243)" } : undefined}
             date={t.date}
             {...t.icon}

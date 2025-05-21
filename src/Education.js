@@ -10,7 +10,7 @@ import { faSchool } from "@fortawesome/free-solid-svg-icons";
 // Icons for the timeline
 const schoolIcon = {
   icon: <FontAwesomeIcon icon={faSchool} />,
-  iconStyle: { background: "rgb(250, 200, 200)", color: "#fff" },
+  iconStyle: { background: "rgb(250, 200, 200)", color: "rgb(255, 255, 255)" },
 };
 
 const Education = () => {
