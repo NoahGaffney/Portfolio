@@ -5,7 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSchool, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faSchool } from "@fortawesome/free-solid-svg-icons";
 
 // Icons for the timeline
 const schoolIcon = {
