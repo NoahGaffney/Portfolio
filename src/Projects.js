@@ -5,11 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faBriefcase,
-    faSchool,
-    faStar,
-  } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
   
 const starIcon = {
   icon: <FontAwesomeIcon icon={faStar} />,
