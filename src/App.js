@@ -1,3 +1,6 @@
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
+import { Helmet } from "react-helmet";
+import { useEffect } from 'react';
 import Home from './Home';
 import Education from './Education';
 import Experience from './Experience';
@@ -5,9 +8,36 @@ import Projects from './Projects';
 import About from './About';
 import Skills from './Skills';
 import Navbar from './Navbar';
-import Linkbar from './Linkbar'; 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
-import { Helmet } from "react-helmet";
+import Linkbar from './Linkbar';
+
+const AppContent = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  return (
+    <>
+      {/* Show Navbar only if NOT on homepage */}
+      {!isHome && <Navbar />}
+
+      <div className="App">
+        <header className="App-header">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about">
+              <About />
+              <Linkbar />
+            </Route>
+            <Route exact path="/education" component={Education} />
+            <Route exact path="/experience" component={Experience} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/skills" component={Skills} />
+          </Switch>
+        </header>
+      </div>
+    </>
+  );
+};
+
 
 function App() {
   return (
@@ -24,36 +54,8 @@ function App() {
           `}
         </script>
       </Helmet>
-      <div className="App">
-        <header className="App-header">
-          <Switch>
-            <Route exact path="/">
-              <Home/>
-            </Route>
-            <Route exact path="/about">
-              <Navbar/>
-              <About/>
-              <Linkbar/>
-            </Route>
-            <Route exact path="/education">
-              <Navbar/>
-              <Education/>
-            </Route>
-            <Route exact path="/experience">
-              <Navbar/>
-              <Experience/>
-            </Route>
-            <Route exact path="/projects">
-              <Navbar/>
-              <Projects/>
-            </Route>
-            <Route exact path="/skills">
-              <Navbar/>
-              <Skills/>
-            </Route>
-          </Switch>
-        </header>
-      </div>
+
+      <AppContent />
     </Router>
   );
 }

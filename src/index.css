@@ -1,4 +1,3 @@
-/*-------------------------------------------------------------------------Imports-------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
@@ -25,42 +24,38 @@ html, body {
 
 /* Set the timeline text color to match the purple theme */
 .vertical-timeline-element-content {
-  color: rgb(200, 150, 255); /* Purple color for timeline text */
-  background: transparent; /* Make background transparent if needed */
-  box-shadow: none; /* Remove box-shadow if present */
+  color: rgb(200, 150, 255);
+  background: transparent;
+  box-shadow: none;
 }
 
-/* Override the title color */
 .vertical-timeline-element-title {
-  color: rgb(200, 150, 255); /* Purple color for titles */
+  color: rgb(200, 150, 255);
 }
 
-/* Override the subtitle color */
 .vertical-timeline-element-subtitle {
-  color: rgb(150, 100, 255); /* Purple color for subtitles */
+  color: rgb(150, 100, 255);
 }
 
-/* Override the date color */
 .vertical-timeline-element-date {
-  color: rgb(200, 150, 255); /* Purple color for dates */
+  color: rgb(200, 150, 255);
 }
 
-/* Set the arrow color to transparent if needed */
 .vertical-timeline-element-content::before {
-  border-right-color: transparent; /* Make the arrow transparent if desired */
+  border-right-color: transparent;
 }
 
 .vertical-timeline-element-content p {
-  color: rgb(125, 0, 255); /* Purple color for description */
+  color: rgb(125, 0, 255);
 }
 
 /* -----------------------------------------------------------------------Home----------------------------------------------------------------------- */
 
 .home {
-  display: flex; /* Use Flexbox for layout */
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center content vertically */
-  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   align-items: flex-start;
   padding-left: 30vw;
   font-size: 18px;
@@ -69,114 +64,106 @@ html, body {
 
 .home h1 {
   font-size: 50px;
-  padding-left: 15px; 
+  padding-left: 15px;
   position: relative;
   color: rgb(200, 250, 250);
 }
 
 .typeScroll {
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .home p {
   position: relative;
-  color:rgb(255, 225, 125);
-  padding-left: 15px; 
+  color: rgb(255, 225, 125);
+  padding-left: 15px;
 }
 
 .home .linkbar {
-  padding-top: 10px;
-  padding-left: 5px; 
+  padding-top: 25px;
+  padding-left: 5px;
   justify-content: flex-start;
   margin: 0;
 }
 
 
 @media (max-width: 1100px) {
-
   .home {
-    align-items: center; 
+    align-items: center;
     padding-left: 0;
   }
- 
+
   .home h1 {
     text-align: center;
   }
 
-  .home .navbar a:hover,
-  .home .navbar a:focus {
-    background-color: transparent;
-    color: rgb(250, 200, 200);
-  }
-
   .home .navbar .links {
-    align-items: center; 
+    align-items: center;
   }
-
 }
 
-/* ---------------------------Navbar Home------------------------------- */
-.home .navbar {
-  background: none;
-  padding: 15px 0px;
-}
-
-.home .navbar h1{
-  display: none;
-}
-
-.home .navbar a {
-  padding: 0px 0px;
-  margin: 15px;
+.home-navbar a,
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  padding: 5px 0;
+  margin: 0 1vw;
+  color: rgb(200, 150, 255);
   background-color: transparent;
+  font-family: "Archivo Black";
+  transition: color 0.3s ease;
+  display: inline-block;
 }
 
-.home .navbar a:nth-of-type(1):after
-{
-  opacity: 1;
-  width: 100%;
-}
-
-.home .navbar a:nth-of-type(1)
-{
-  color: rgb(250, 200, 200);
-}
-
-.home .navbar a:hover::after,
-.home .navbar a:focus::after {
-  opacity: 1;
-  width: 100%;
-}
-
-
-.home .navbar a::after{
-  content: ''; 
-  height: 4px;
-  width: 0%;
-  background: rgb(255, 225, 125);
+.home-navbar a::after,
+.navbar a::after {
+  content: '';
   position: absolute;
   left: 0;
-  bottom: 10; 
+  bottom: -3px;
+  height: 3px;
+  background-color: rgb(255, 225, 125);
+  width: 0%;
   opacity: 0;
-  transition: all 0.8s;
-  pointer-events: none;
+  transform-origin: center;
+  transition: width 0.4s ease, opacity 0.4s ease;
 }
 
+.home-navbar a:hover::after,
+.home-navbar a:focus::after,
+.navbar a:hover::after,
+.navbar a:focus::after {
+  width: 100%;
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.home-navbar a.active-link,
+.navbar a.active-link {
+  color: rgb(250, 200, 200);
+  font-weight: bold;
+}
+
+.home-navbar a.active-link::after,
+.navbar a.active-link::after {
+  width: 100%;
+  opacity: 1;
+  transform: scaleX(1);
+}
 
 /* ----------------------------------------------------------------About------------------------------------------------------------ */
-/* Apply background color to the entire page */
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Ensure the body covers the full viewport height */
-  background-color: rgb(0, 10, 25); /* Set the desired background color */
+  min-height: 100vh;
+  background-color: rgb(0, 10, 25);
 }
 
 html {
-  height: 100%; /* Ensure the html element also covers the full height */
+  height: 100%;
 }
 
-/* Keep your existing styles */
 .about-content {
   display: flex;
   align-items: center;
@@ -190,13 +177,11 @@ html {
 }
 
 .about-text {
-  font-family: "Afacad Flux", sans-serif;
   font-size: 18px;
   line-height: 1.75;
 }
 
 .About {
-  font-family: "Afacad Flux", sans-serif;
   position: relative;
   margin: 40px auto;
   max-width: 850px;
@@ -206,38 +191,17 @@ html {
   color: white;
 }
 
-.About h2 {
-  font-family: "Afacad Flux", sans-serif;
-  position: relative;
-  margin: 40px auto;
-  max-width: 850px;
-  line-height: 1.6;
-  font-size: 24px;
-  padding: 0 10px;
-}
-
-.About h2::after {
-  content: '';
-  height: 3px;
-  width: 50vw;
-  background: rgb(255, 225, 125);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: all 0.4s;
-  pointer-events: none;
-}
-
+.About h2,
 .About h3 {
-  font-family: "Afacad Flux", sans-serif;
-  position: relative;
-  margin: 40px auto;
-  max-width: 850px;
-  line-height: 1.6;
   font-size: 24px;
   padding: 0 10px;
+  margin: 40px auto;
+  max-width: 850px;
+  position: relative;
+  line-height: 1.6;
 }
 
+.About h2::after,
 .About h3::after {
   content: '';
   height: 3px;
@@ -250,17 +214,7 @@ html {
   pointer-events: none;
 }
 
-@keyframes highlight {
-  from {
-    background-color: rgb(250, 200, 200);
-  }
-  to {
-    background-color: transparent;
-  }
-}
-
 .highlight-link {
-  font-family: "Afacad Flux", sans-serif;
   font-weight: bold;
   position: relative;
   text-decoration: none;
@@ -270,6 +224,15 @@ html {
 .highlight-link:hover,
 .highlight-link:focus {
   animation: highlight 1s forwards;
+}
+
+@keyframes highlight {
+  from {
+    background-color: rgb(250, 200, 200);
+  }
+  to {
+    background-color: transparent;
+  }
 }
 
 .bullet-points-container {
@@ -289,7 +252,6 @@ html {
 .bullet-points li {
   font-weight: bold;
   font-size: 20px;
-  font-family: "Afacad Flux", sans-serif;
   margin-bottom: 10px;
 }
 
@@ -306,13 +268,11 @@ html {
 .skills-group h3 {
   font-size: 22px;
   margin-bottom: 15px;
-  color: rgb(255, 225, 125); /* or any accent from your palette */
+  color: rgb(255, 225, 125);
   border-bottom: 2px solid rgb(200, 150, 255);
   padding-bottom: 5px;
 }
 
-
-/* Media query for smaller screens */
 @media (max-width: 800px) {
   .about-content {
     flex-direction: column;
@@ -337,61 +297,52 @@ html {
   }
 }
 
-
-
 /* -------------------------------------------------------------Education------------------------------------------------------------ */
-
-/* Adjust the container */
 .Education {
   background-color: rgb(0, 10, 25);
-  min-height: 100vh; /* Full viewport height */
-  padding: 40px 10vw; /* Padding around the content */
+  min-height: 100vh;
+  padding: 40px 10vw;
 }
 
-/* Align h2 to the left */
 .Education h2 {
   position: relative;
-  margin: 0; /* No margin on the sides */
+  margin: 0;
   max-width: 650px;
   line-height: 1.6;
   font-size: 32px;
   padding: 0 10px;
-  text-align: left; /* Align text inside h2 to the left */
+  text-align: left;
 }
 
-/* The line under h2 */
 .Education h2::after {
-  content: ''; 
+  content: '';
   height: 3px;
   width: 75vw;
   background: rgb(255, 225, 125);
   position: absolute;
-  left: 0; /* Align the underline to the left */
+  left: 0;
   bottom: 0;
   transition: all 0.4s;
   pointer-events: none;
 }
 
-/* Styles for the PDF button image */
 .pdf-button-image {
-  width: 35%; /* Set the default width */
-  height: auto; /* Adjust height automatically to maintain aspect ratio */
-  margin-top: 10px; /* Space between the image and other elements */
-  cursor: pointer; /* Show pointer when hovering over the image */
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth transitions */
+  width: 35%;
+  height: auto;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .pdf-button-image:hover {
-  transform: scale(1.25); /* Slight zoom effect on hover */
-  opacity: 1; /* Make it slightly transparent on hover */
+  transform: scale(1.25);
+  opacity: 1;
 }
 
-/* Add additional styling if needed */
 .pdf-button-image:active {
-  transform: scale(0.95); /* Slight shrink effect when clicked */
-  opacity: 0.6; /* More transparency when clicked */
+  transform: scale(0.95);
+  opacity: 0.6;
 }
-
 
 /* -------------------------------------------------------------Experience------------------------------------------------------------- */
 .Experience h2 {
@@ -399,7 +350,7 @@ html {
   max-width: 650px;
   line-height: 1.6;
   font-size: 24px;
-  padding: 0 10px
+  padding: 0 10px;
 }
 
 /* -------------------------------------------------------------Projects------------------------------------------------------------- */
@@ -408,24 +359,22 @@ html {
   max-width: 650px;
   line-height: 1.6;
   font-size: 24px;
-  padding: 0 10px
+  padding: 0 10px;
 }
 
 /* ----------------------------------------------------------------Skills------------------------------------------------------------- */
 .Skills h2 {
-  font-family: "Afacad Flux", sans-serif;
+  font-size: 28px;
   position: relative;
   margin: 40px auto;
   max-width: 850px;
   line-height: 1.6;
-  font-size: 28px;
   padding: 0 10px;
 }
 
 .Skills {
-  padding-bottom: 120px; /* adjust as needed */
+  padding-bottom: 120px;
 }
-
 
 .Skills h2::after {
   content: '';
@@ -452,29 +401,27 @@ html {
 }
 
 .socialLinks img {
-  width: 35px; 
-  height: 35px; 
-  margin: 0 10px; 
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
   border-radius: 10px;
-  background: rgb(200, 250, 250); 
+  background: rgb(200, 250, 250);
   transition: transform 0.3s ease;
   overflow: hidden;
   position: relative;
 }
 
-.socialLinks img:hover{
+.socialLinks img:hover {
   transform: translateY(-10px);
-  background: rgb(255, 190, 200); 
-  
+  background: rgb(255, 190, 200);
 }
-
 
 /* ----------------------------------------------------------------------Navbar------------------------------------------------------------- */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center; /* Distributes space between items */
-  padding: 25px 20px; /* Adjusted padding for better responsiveness */
+  justify-content: center;
+  padding: 25px 20px;
   background-color: rgb(20, 30, 45);
 }
 
@@ -482,16 +429,46 @@ html {
   font-size: 35px;
   padding-right: 2.5vw;
   background: transparent;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .navbar a {
-  font-family: "Archivo Black";
+  position: relative;
+  text-decoration: none;
   padding: 5px 1.25vw;
   color: rgb(200, 150, 255);
-  background-color: rgb(20, 30, 45);
-  text-decoration: none;
-  position: relative;
+  background-color: transparent;
+  font-family: "Archivo Black";
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 0%;
+  background-color: rgb(255, 225, 125);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+  width: 40%;
+  opacity: 1;
+}
+
+.navbar a.active-link {
+  color: rgb(250, 200, 200);
+  font-weight: bold;
+}
+
+.navbar a.active-link::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .navbar .menu {
@@ -507,45 +484,16 @@ html {
 
 .navbar .menu span {
   height: 0.4rem;
-  width: 100%; 
+  width: 100%;
   background-color: rgb(200, 150, 255);
   border-radius: 0.2rem;
   transition: all 0.6s;
 }
 
-.navbar .menu span :hover
-.navbar .menu span :focus {
-  color: rgb(250, 200, 200);
-}
-
-.navbar a:hover,
-.navbar a:focus {
-  color: rgb(250, 200, 200);
-}
-
-.navbar a:hover::after,
-.navbar a:focus::after {
-  opacity: 1;
-  width: 40%;
-}
-
-.navbar a::after {
-  content: ''; 
-  height: 4px;
-  width: 0%;
-  background: rgb(255, 225, 125);
-  position: absolute;
-  left: 15px;
-  bottom: -5px; 
-  opacity: 0;
-  transition: all 0.6s;
-  pointer-events: none;
-}
-
 @media (max-width: 1100px) {
   .navbar {
     flex-direction: column;
-    align-items: center; /* Center h1 */
+    align-items: center;
   }
 
   .navbar .menu {
@@ -553,19 +501,17 @@ html {
     transition: all 0.6s;
     padding: 25px 20px;
     cursor: pointer;
-    margin-left: auto; /* Moves the menu to the right */
+    margin-left: auto;
   }
-  
+
   .navbar .links {
     display: none;
     flex-direction: column;
-    align-items: flex-end; /* Aligns links to the right */
+    align-items: flex-end;
     transition: all 0.6s;
     background-color: transparent;
-    width: 100%; /* Ensures links take the full width */
+    width: 100%;
   }
-
- 
 
   .navbar .links.open {
     display: flex;
@@ -575,18 +521,8 @@ html {
     text-decoration: none;
     padding: 10px 0;
   }
-
-  .navbar a:hover::after,
-  .navbar a:focus::after {
-    opacity: 0;
-  }
-
-  .navbar a:hover,
-  .navbar a:focus {
-    background-color: rgb(255, 225, 125);
-    border-radius: 25%;
-    color: rgb(150, 100, 225);
-  }
 }
 
-
+body.home .navbar {
+  display: none !important;
+}
