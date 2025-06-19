@@ -17,6 +17,13 @@ const Projects = () => {
   const timeline = [
     {
       icon: starIcon,
+      date: "April 2025 - CURRENT",
+      title: "Home Server",
+      subtitle: "Whats currently hosting this site",
+      desc: "I have set up a home server using an old laptop, which is currently hosting this website. This project has been a great learning experience in server management and web hosting. I've also set it up to run a Minecraft server, allowing me to host games for friends and family. This has not only improved my technical skills but also provided a fun way to connect with others.",
+    },
+    {
+      icon: starIcon,
       date: "SEP 2024 - CURRENT",
       title: "THIS WEBSITE!",
       subtitle: "built in react - Fully Personal/Solo",

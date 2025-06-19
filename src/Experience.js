@@ -17,8 +17,15 @@ const Experience = () => {
   const timeline = [
     {
       icon: workIcon,
-      date: "SEP 2024 - CURRENT",
-      title: "MICRO CENTER",
+      date: "MARCH 2025 - CURRENT",
+      title: "MICRO CENTER (Service Technician)",
+      subtitle: "Yonkers, NY",
+      desc: "Diagnoses and repairs computer hardware and software issues. Performs system upgrades, data transfers, and technical troubleshooting. Provides in-person technical support and maintains service documentation. This role requires a strong understanding of computer systems, excellent problem-solving skills, and the ability to communicate technical information effectively to customers.",
+    },
+    {
+      icon: workIcon,
+      date: "SEP 2024 - MARCH 2025",
+      title: "MICRO CENTER (General Sales Associate)",
       subtitle: "Yonkers, NY",
       desc: "Dedicated to providing exceptional customer service and guiding customers towards optimal technology solutions. This involves leveraging product knowledge to offer tailored recommendations, assisting with purchases, and fostering a positive shopping experience.",
     },

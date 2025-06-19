@@ -299,6 +299,19 @@ html {
   margin-right: 5px;
 }
 
+.skills-group {
+  margin-bottom: 40px;
+}
+
+.skills-group h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: rgb(255, 225, 125); /* or any accent from your palette */
+  border-bottom: 2px solid rgb(200, 150, 255);
+  padding-bottom: 5px;
+}
+
+
 /* Media query for smaller screens */
 @media (max-width: 800px) {
   .about-content {
@@ -408,6 +421,11 @@ html {
   font-size: 28px;
   padding: 0 10px;
 }
+
+.Skills {
+  padding-bottom: 120px; /* adjust as needed */
+}
+
 
 .Skills h2::after {
   content: '';
