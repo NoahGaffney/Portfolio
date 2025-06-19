@@ -1,43 +1,29 @@
-import { NavLink, useLocation } from 'react-router-dom';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const isHome = location.pathname === '/'; // detect homepage
-
-  const links = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About Me' },
-    { to: '/education', label: 'Education' },
-    { to: '/experience', label: 'Experience' },
-    { to: '/projects', label: 'Projects' },
-    { to: '/skills', label: 'Skills' },
-  ];
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className={`navbar ${isHome ? 'hidden-navbar' : ''}`}>
+    <nav className="navbar">
       <h1>Noah Gaffney</h1>
-      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
-        <span></span>
-        <span></span>
-        <span></span>
+
+      <div className="menu" onClick={toggleMenu}>
+        <span />
+        <span />
+        <span />
       </div>
-      <div className={`links ${menuOpen ? "open" : ""}`}>
-        {links.map(({ to, label }) => (
-          <NavLink
-            key={to}
-            exact
-            to={to}
-            activeClassName="active-link"
-          >
-            {label}
-          </NavLink>
-        ))}
-        <a href="/Resume2024_Noah_Gaffney.pdf" target="_blank" rel="noopener noreferrer">
-          CV
-        </a>
+
+      <div className={`links ${isOpen ? 'open' : ''}`}>
+        <NavLink exact to="/" activeClassName="active-link" onClick={() => setIsOpen(false)}>Home</NavLink>
+        <NavLink to="/about" activeClassName="active-link" onClick={() => setIsOpen(false)}>About Me</NavLink>
+        <NavLink to="/education" activeClassName="active-link" onClick={() => setIsOpen(false)}>Education</NavLink>
+        <NavLink to="/experience" activeClassName="active-link" onClick={() => setIsOpen(false)}>Experience</NavLink>
+        <NavLink to="/projects" activeClassName="active-link" onClick={() => setIsOpen(false)}>Projects</NavLink>
+        <NavLink to="/skills" activeClassName="active-link" onClick={() => setIsOpen(false)}>Skills</NavLink>
+        <a href="/Resume2024_Noah_Gaffney.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </div>
     </nav>
   );
