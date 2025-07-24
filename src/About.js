@@ -20,9 +20,6 @@ const About = () => {
 
             <div className="bullet-points-container">
             <ul className="bullet-points">
-                //<li>Birthday: April 17, 1999</li>
-                //<li>Phone: +1 (917) 855 - 6205</li>
-
                 <li>City: New Rochelle, NY</li>
                 <li>Email: NoahDGaffney@Gmail.com</li>
             </ul>
