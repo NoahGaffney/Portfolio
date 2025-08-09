@@ -23,7 +23,7 @@ const Navbar = () => {
         <NavLink to="/experience" activeClassName="active-link" onClick={() => setIsOpen(false)}>Experience</NavLink>
         <NavLink to="/projects" activeClassName="active-link" onClick={() => setIsOpen(false)}>Projects</NavLink>
         <NavLink to="/skills" activeClassName="active-link" onClick={() => setIsOpen(false)}>Skills</NavLink>
-        <a href="/Resume2024_Noah_Gaffney.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="/Noah_Gaffney_Resume_2025.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       </div>
     </nav>
   );
