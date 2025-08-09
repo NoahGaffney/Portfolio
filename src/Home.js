@@ -35,7 +35,7 @@ const Home = () => {
         <NavLink to="/projects" className={({ isActive }) => isActive ? 'active-link' : ''}>Projects</NavLink>
         <NavLink to="/skills" className={({ isActive }) => isActive ? 'active-link' : ''}>Skills</NavLink>
         <a
-          href="/Resume2024_Noah_Gaffney.pdf"
+          href="/Noah_Gaffney_Resume_2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
