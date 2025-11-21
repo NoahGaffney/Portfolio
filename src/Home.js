@@ -39,7 +39,7 @@ const Home = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          CV
+          Resume
         </a>
       </div>
 
